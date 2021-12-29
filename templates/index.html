@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <title>APP Assignment</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <!-- Header-->
+    <header>
+        <h3 id="siteName">Application of Programming<br>Principles</h3>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#journal">Journal</a></li>
+            </ul>
+        </nav>
+        <div id="headerContent">
+            <div>
+                <h3>Thought of the day...</h3>
+            </div>
+            <div id="thoughtsSec">
+                <p id="thoughtOfTheDay">Placeholder</p>
+            </div>
+            <div>
+                <p><button id="btnEditThoughts">Edit Thoughts</button></p>
+                <p><button id="btnRefreshThoughts">Random thought</button></p>
+            </div>
+        </div>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <!-- About Section -->
+        <section class="about-site" id="about">
+            <div class="elementHeader">
+                <h3 >About APP</h3>
+                <p>Key features of the assignment</p>
+            </div>
+            <ul>
+                <li>
+                    <b>Calculator</b>
+                    <p>
+                        Within the Calculator section, you will find four different modals, one for each operator which
+                        either gets a local result using regular JS or uses a request method to fetch one from the
+                        Flask server. Furthermore, each section has been fitted with "not so over the top stylisation",
+                        this is to help keep each section simpler to ensure anyone can understand. Lastly, I've fitted
+                        the division operator with a logical statement, this is to ensure when the divisor is equal to 0
+                        or empty, it will return "#DIV/0" rather than infinity which is incorrect.
+                    </p>
+                </li>
+                <li>
+                    <b>Journal</b>
+                    <p>
+                        Within the Journal section, you will be able to find logs of each week up until this project was
+                        completed. All journal entries are stored in a JSON which is then hosted on the Flask server, so
+                        that the JS can populate the Entries field. On top of that, users can "add" and "delete" without
+                        pushing each entry individually. Instead they can use the "Upload Journals" button and publish the
+                        updated list which will retain on reload. Lastly, when entering a custom value within the "ID" section
+                        it will append that value with value entered to the current JSON, however, if the value is left
+                        blank or 0, it will append to the next index that isn't custom fitted.
+                    </p>
+                </li>
+                <li>
+                    <b>Design</b>
+                    <p>
+                        The design approach I have taken to create the theme of this website was highly inspired by
+                        "Discord.Com's" website using two main colours only, for example, several shades of purple and
+                        different shades of white. On top of that, when designing the website I had thought of a simplistic
+                        way to give users a fresh look, whilst looking like the typical one-page-websites to ensure that
+                        consistency is kept. Lastly, the responsiveness. I have taken the flex route instead of the boot-
+                        strap framework, this was so I could get a deeper understanding of responsiveness and format,
+                        instead of having a pre-text that'll do it all for me.
+                    </p>
+                </li>
+                <li>
+                    <b>Thoughts</b>
+                    <p>
+                        The Thoughts section. This section as seen above is a way to engage users when viewing the website,
+                        much like the Journal section, each thought can be added or deleted by selecting the Admin list button.
+                        However, a thought can not be chosen, instead they are given at random whether you are refreshing or
+                        on first load. Furthermore, each of these thoughts have been forked from several websites, only due
+                        to my thoughts being quite dull...
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+    <!-- Calculator Section -->
+        <section class="calculator" id="calculator">
+            <div class="elementHeader">
+                <h3>Calculator</h3>
+                <p>The one who runs the sums</p>
+            </div>
+            <ul>
+                <li>
+                    <h3>Addition</h3>
+                    <label for="add1">Number 1</label><br>
+                    <input type="number" id="add1"/><br>
+                    <label for="add2">Number 2</label><br>
+                    <input type="number" id="add2"/><br>
+                    <br>
+                    <label for="inputAdd">Result</label><br>
+                    <input type="text" id="inputAdd" placeholder="0"/><br>
+                    <p>
+                        <button id="btnAdd" onclick="addNumbers()">Add</button>
+                        <button id="btnAddAPI">Add via API</button>
+                    </p>
+                    <p><button id="btnAddCopy" onclick="copyText('inputAdd', this.id)">Copy to clipboard</button></p>
+                </li>
+                <li>
+                    <h3>Subtract</h3>
+                    <label for="sub1">Number 1</label><br>
+                    <input type="number" id="sub1"/><br>
+                    <label for="sub2">Number 2</label><br>
+                    <input type="number" id="sub2"/><br>
+                    <br>
+                    <label for="inputSubtract">Result</label><br>
+                    <input type="text" id="inputSubtract" placeholder="0"/><br>
+                    <p>
+                        <button id="btnSubtract">Subtract</button>
+                        <button id="btnSubtractAPI"> Subtract via API</button>
+                    </p>
+
+                    <p><button id="btnSubtractCopy" onclick="copyText('inputSubtract', this.id)">Copy to clipboard</button></p>
+                </li>
+                <li>
+                    <h3>Multiply</h3>
+                    <label for="multi1">Number 1</label><br>
+                    <input type="number" id="multi1"/><br>
+                    <label for="multi2">Number 2</label><br>
+                    <input type="number" id="multi2"/><br>
+                    <br>
+                    <label for="inputMultiply">Result</label><br>
+                    <input type="text" id="inputMultiply" placeholder="0"/><br>
+                    <p>
+                        <button id="btnMultiply">Multiply</button>
+                        <button id="btnMultiplyAPI">Multiply via API</button>
+                    </p>
+                    <p><button id="btnMultiplyCopy" onclick="copyText('inputMultiply', this.id)">Copy to clipboard</button></p>
+                </li>
+                <li>
+                    <h3>Divide</h3>
+                    <label for="divi1">Number 1</label><br>
+                    <input type="number" id="divi1"/><br>
+                    <label for="divi2">Number 2</label><br>
+                    <input type="number" id="divi2"/><br>
+                    <br>
+                    <label for="inputDivide">Result</label><br>
+                    <input type="text" id="inputDivide" placeholder="0"/><br>
+                    <p>
+                        <button id="btnDivide">Divide</button>
+                        <button id="btnDivideAPI">Divide via API</button>
+                    </p>
+                    <p><button id="btnDivideCopy" onclick="copyText('inputDivide', this.id)">Copy to clipboard</button></p>
+                </li>
+            </ul>
+        </section>
+        <!-- Journal Section -->
+        <section class="journal" id="journal">
+            <div class="elementHeader">
+                <h3>Journal</h3>
+                <p>What I've done</p>
+            </div>
+            <ul>
+                <li>
+                    <h3>Selected Entry</h3>
+                    <label for="idEntry">ID: </label>
+                    <input type="number" id="idEntry">
+                    <label for="dateEntry">Date: </label>
+                    <input type="text" id="dateEntry">
+                    <label for="namEntry">Name: </label>
+                    <input type="text" id="namEntry">
+                    <label for="txtNote" id="wordCount">Notes: </label>
+                    <textarea id="txtNote" name="txtNote" rows="4" cols="50"></textarea>
+                    <p><button id="btnDeleteEntry">Delete</button></p>
+                    <p><button id="btnUploadJournal1">Upload Journal</button></p>
+                </li>
+                <li>
+                    <h3>Add Entry</h3>
+                    <label for="idAdd">ID:</label>
+                    <input type="number" id="idAdd" placeholder="Optional">
+                    <label for="dateAdd">Date:</label>
+                    <input type="text" id="dateAdd">
+                    <label for="nameAdd">Name:</label>
+                    <input type="text" id="nameAdd">
+                    <label for="txtAdd">Notes:</label>
+                    <textarea id="txtAdd" name="txtAdd" rows="4" cols="50"></textarea>
+                    <p><button id="btnAddEntry">Add</button></p>
+                    <p><button id="btnUploadJournal2">Upload Journal</button></p>
+                </li>
+            </ul>
+        </section>
+        <!-- Entries Section -->
+        <section class="journalEntries">
+            <div class="elementHeader">
+                <h3>Journal Entries</h3>
+                <p>Select one of the fields below</p>
+            </div>
+            <div>
+                <ol id="listEntries">
+                    <li>placeholder</li>
+                </ol>
+            </div>
+        </section>
+        <div class="modalHidden" id="toggleModal">
+            <div class="modalContent">
+                <div class="modalClose">
+                    <span>&times;</span>
+                </div>
+                <div class="elementHeader">
+                    <h3>Thoughts</h3>
+                    <p>Random Thoughts</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>Select Thought</h3>
+                            <label for="thoughtEntry">Thought:</label>
+                            <textarea id="thoughtEntry" name="thoughtEntry" rows="4" cols="50" ></textarea>
+                            <p><button id="btnThoughtRemove">Remove</button></p>
+                            <p><button id="btnUploadThought1">Upload Journal</button></p>
+                        </li>
+                        <li>
+                            <h3>Add Thought</h3>
+                            <label for="thoughtAdd">Thought:</label>
+                            <textarea id="thoughtAdd" name="thoughtAdd" rows="4" cols="50" ></textarea>
+                            <p><button id="btnThoughtAdd">Add</button></p>
+                            <p><button id="btnUploadThought2">Upload Journal</button></p>
+                        </li>
+                    </ul>
+                    <ol id="thoughtEntries">
+                        <li>placeholder</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <button id="moveTop">🡩</button> <!--Calls moveTop function when scrolled 20px down -->
+        <div id="footer">
+
+        </div>
+    </footer>
+    <script src="/static/scripts/app.js"></script>
+</body>
+</html>

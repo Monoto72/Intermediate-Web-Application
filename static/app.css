@@ -1,0 +1,472 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    user-select: none;
+}
+
+button {
+    margin: 0;
+    padding: 8px 0 8px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #7674e2;
+    border: none;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #6a68cb;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea::-webkit-scrollbar-track,
+.modalContent::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+    border-radius: 0 8px 8px 0;
+}
+
+textarea::-webkit-scrollbar {
+	width: 10px;
+    border-radius: 0 8px 8px 0;
+	background-color: #F5F5F5;
+}
+
+.modalContent::-webkit-scrollbar {
+	width: 10px;
+    border-radius: 0 8px 8px 0;
+	background-color: #F5F5F5;
+}
+
+textarea::-webkit-scrollbar-thumb,
+.modalContent::-webkit-scrollbar-thumb {
+	background-color: #7674e2;
+    border-radius: 0 8px 8px 0;
+}
+
+textarea::-webkit-scrollbar-thumb:hover,
+.modalContent::-webkit-scrollbar-thumb:hover {
+	background-color: #6a68cb;
+}
+
+header {
+    background-color: #7674e2;
+    padding: 32px;
+    text-align: center;
+}
+
+#siteName {
+    font-size: 45px;
+    color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav a {
+    font-size: 17px;
+    color: #f2f2f2;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav a:focus,
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    padding-bottom: 50px;
+}
+
+
+#headerContent {
+    padding-top: 16px;
+    padding-bottom: 50px;
+    width: 70%;
+    max-height: 500px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+        0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+}
+
+#headerContent h3 {
+    color: #2c2f33;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#thoughtOfTheDay {
+    padding: 0 50px;
+    height: 175px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnEditThoughts,
+#btnRefreshThoughts {
+    width: 50%;
+}
+
+#moveTop {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #5e5db5;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementHeader {
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+    position: relative;
+}
+
+.about-site ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+.about-site li {
+    margin: 15px 2.5%;
+    border-radius: 12px;
+    flex: 1 0 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.calculator ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+.calculator li {
+    margin: 25px 2.5%;
+    border-radius: 12px;
+    flex: 1 0 20%;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+.calculator input[type=number],
+.calculator input[type=text] {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+    border: none;
+    background: #d9d9d9;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+}
+
+.calculator input[type=number]:focus,
+.calculator input[type=text]:focus {
+    background-color: #c1c1c1;
+    outline: none;
+}
+
+.calculator button {
+    width: 49%;
+}
+
+#btnAdd,
+#btnSubtract,
+#btnMultiply,
+#btnDivide {
+    border-radius: 8px 0 0 8px;
+}
+
+#btnAddAPI,
+#btnSubtractAPI,
+#btnMultiplyAPI,
+#btnDivideAPI {
+    border-radius: 0 8px 8px 0;
+}
+
+#btnAddCopy,
+#btnSubtractCopy,
+#btnMultiplyCopy,
+#btnDivideCopy {
+    width: 100%;
+}
+
+.journal ul,
+.modal ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+.journal li,
+.modal li {
+    margin: 25px 2.5%;
+    border-radius: 12px;
+    flex: 1 0 45%;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+.journal input[type=number],
+.journal input[type=text] {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+    border: none;
+    background: #d9d9d9;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+}
+
+.journal input[type=date] {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0 5px 0;
+    padding: 0 0 5px 0;
+    border: none;
+    background: #d9d9d9;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+}
+
+.journal textarea,
+.modal textarea {
+    width: 100%;
+    max-height: 100%;
+    height: 100px;
+    resize: none;
+    border: none;
+    text-align: center;
+    background: #d9d9d9;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    margin: 5px 0 5px 0;
+    overflow-x: hidden;
+}
+
+.journal input[type=number]:focus,
+.journal input[type=text]:focus,
+.journal input[type=date]:focus,
+.journal textarea:focus,
+.modal textarea:focus {
+    background-color: #c1c1c1;
+    outline: none;
+}
+
+.journal li button,
+.modal li button {
+    width: 100%;
+}
+
+.journalEntries ol {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+.journalEntries li,
+#thoughtEntries li {
+    margin: 15px 2.5%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    flex: 1 0 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.journalEntries li:hover,
+#thoughtEntries li:hover {
+    cursor: pointer;
+}
+
+.journalEntries li.active,
+#thoughtEntries li.active {
+    color: #5e5db5;
+    font-weight: bold;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.modalHidden {
+    display: none;
+}
+
+.modalContent {
+    background-color: #f2f2f2;
+    width: 80%;
+    height: 75%;
+    border-radius: 12px;
+    overflow-y: scroll;
+}
+
+.modalClose {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 32px;
+    margin-top: 16px;
+    font-size: 32px;
+}
+
+.modalClose:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modalContent li {
+    margin: 15px 2.5%;
+    border-radius: 12px;
+    flex: 1 0 45%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.modalContent ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+#thoughtEntries {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+#footer {
+    height: 100px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+        0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    background-color: #dadada;
+}
+
+@media screen and (max-width: 1400px) {
+    .about-site li,
+    .calculator li,
+    .journalEntries li,
+    #thoughtEntries li {
+        flex: 1 0 45%;
+    }
+
+    #headerContent {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about-site li,
+    .calculator li,
+    .journal li,
+    .journalEntries li,
+    .modalContent li,
+    #thoughtEntries li {
+        flex: 1 0 95%;
+    }
+
+    #headerContent {
+        width: 95%;
+        max-height: 550px;
+    }
+}
+
+
+
+

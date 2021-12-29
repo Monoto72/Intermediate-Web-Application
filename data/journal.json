@@ -1,0 +1,85 @@
+{
+    "journals": [
+        {
+            "name": "Introduction to APP",
+            "date": "05/02/2021",
+            "note": "Week 1! During this week, I had started on the lab task and completed it during said lab. That said, I had learned how variables and basic functions work in JavaScript, as there are many differences to other coding syntaxes. After finishing the Lab this week, I had some spare time on my hands, which I had used to go through a JavaScript crash course by \"Traversy Media\"."
+        },
+        {
+            "name": "Fundamentals of Python",
+            "date": "12/02/2021",
+            "note": "Week 2! During this week, I had learned the basics of Python in the lab session, this was the first time I had used Python ever. Although the language was quite peculiar, I much enjoyed the variables having not needed an initial declaration. On top of that, I am still baffled to why tuples are not deprecated and fully replaced with dictionaries, as dictionaries are mutable."
+        },
+        {
+            "name": "JavaScript logic",
+            "date": "19/02/2021",
+            "note": "Week 3! During this week, I had learned many ways of utilising Javascript for logic, thus, I had learned simple \"IF\" statements, \"SWITCH\" statements, \"LOOP\" statements, etc. all of which have been used to process arithmetic logic, using many operators, including \"TYPEOF\" to check for the data-type. Having said that, this was completed quite quickly into the lab, thanks to the JS crash course I completed last week."
+        },
+        {
+            "name": "Python functions/ exceptions",
+            "date": "26/02/2021",
+            "note": "Week 4! During this week, I had played around with some Python and JavaScript functions, to call data from other functions. Thus, when it came to the lab, I was able to finish the work set quite quickly, having done so, I had taken a shot trying to make the calculator section work with just JavaScript. On top of that, I found out the core differences between tuples, and dictionaries. For instance, tuples are immutable to save memory, to ensure needless amounts of resources are needed. Finally, I had messed around with the try and catch additions to Python, to ensure my code does not break, as the result of failure or bad request."
+        },
+        {
+            "name": "Non-UNI Spare Time",
+            "date": "26/02/2021",
+            "note": "Week 5! During this week, I had no outstanding work, thus, I had worked on a project just to get the grips of JavaScript. This was by making a small-cookie clicker game, to understand how exactly google handles local storage, rather than databases, whilst also helping me to learn DOM manipulation."
+        },
+        {
+            "name": "JavaScript objects/ function",
+            "date": "05/03/2021",
+            "note": "Week 6! Although I did not have much spare time this week, week 6, due to other occurrences, I had attended the lab session on Wednesday completing the work set. I found this work pretty easy due to last week having made a small clicker game using functions, helping me to understand the data types that can be called and the events that can be used within functions. Additionally, I found the Objects simplistic, this was due to them being more or less the same as the Python format."
+        },
+        {
+            "name": "Flask Application",
+            "date": "12/03/2021",
+            "note": "Week 7! During the lab session, I had found these tasks significantly harder as opposed to other sessions, this was due to the mingling of both languages in order to reach fetch an API, and receive a JSON output. Although I had completed them, in the end, thanks to my assigned lab teacher, they went into detail so that I could fully grasp the usage of them, and how they have programmed both ends. In addition, I watched a youtube video based on Flask GET/ PUT by \"Tech With Tim\" and \"Julian Nash\"."
+        },
+        {
+            "name": "DOM JSON - Briefing",
+            "date": "19/03/2021",
+            "note": "Week 8! During this week, we were handed the brief, however, I did not really touch, or look at it, up until later today. However, this week prior to Friday I had got an advanced take on DOM manipulation, for example, we were taught how to append to the current list using an append on a text node, thus, appending the tag, then calling the data and attributes alongside it. Finally, I had started to work on the Calculator section, although I did not finish it, I got to understand if not most of it."
+        },
+        {
+            "name": "Assignment Start",
+            "date": "26/03/2021",
+            "note": "Week 9! During this week, I had read the brief thoroughly noting down all must-haves, should-haves, could-haves, and would-haves. I then downloaded AdobeXD and made a draft template for my website, to ensure that I kept to a plan. On top of that, I surfed the WEB looking for a fancy theme, which then I landed on Discord and Facebook where the layout way pristine. Thus, I have designed my website based on similar attributes, hence the stylization is somewhat resembling."
+        },
+        {
+            "name": "Calculator Section",
+            "date": "02/04/2021",
+            "note": "Week 10! During this week, I had followed the tutorial on Brightspace, on which I had done some work last week, thus, I can reuse some of it. Moreover, once I had completed the front-end part of the system, I then progressed onto the back-end, being the Python. This is where it became somewhat hard due to issues with my flask not registering headers, thus, I had to import the CORS library which then alleviated all the issues, however, wasting 3 days of progress, but nonetheless, I eventually understood my errors."
+        },
+        {
+            "id": "10",
+            "name": "Initial CSS Section",
+            "date": "09/04/2021",
+            "note": "Week 11! During this week, with a CSS back-bone, essentially copying W3-Schools layout section, which is free to use. However, the responsiveness was being literally unresponsive, despite its main purpose. Having said that, I have currently removed all the w3 school"
+        },
+        {
+            "name": "Journal",
+            "date": "16/04/2021",
+            "note": "Week 12! During this week, I had started the front-end parts to the Journal, this included getting the entries, appending them, deleting them, and populating them. All of which was merely taken from the brightspace tutorial week commencing 22nd march, these really helped, however, setting the for loop up to get each of thee entries on load, was a pain. This was due to myself getting muddled up with the element tags, and so forth that issue has not arisen again. Additionally, I have made it so upon clicking \"ADD\" it uploads the current journal, by appending it to the current list."
+        },
+        {
+            "name": "Journal Continuation CSS Rework",
+            "date": "23/04/2021",
+            "note": "Week 13! During this week, I had amended the last change I made to the Journal section, this was the upload thoughts, instead of the \"ADD\" button appending the new \"JSON\", I thought it was impractical to upload each time. Therefore, I have amended this piece of code to upload the full journal rather than each entry separate, this meant I could dump the current list, whilst appending the ones that have been manipulated, or removed from the section. Additionally, I had reworked the CSS, as it was too obfuscated. To do this, I had implemented ULs and LIs to my Index, so that I can use the correct Flex CSS properties, based on documentation offered by Mozilla. In conclusion, fixing the layout, whilst making it compatible for all device widths."
+        },
+        {
+            "name": "Thought of the day",
+            "date": "30/04/2021",
+            "note": "Week 14! During this week, I had essentially duplicated sections of the Journal, and it entries section. Once I had done this, I housed them into modal, so that on button click, it will pop up with the same elements as the bottom of the DOM. Moreover, having done this, I had to implement a few features, and events - just to ensure the modal was pristine. Therefore, to clean my code up and make it more practical I housed the random function in JavaScript so that I can manipulate other parts of the \"Thought\" result without, duplicating many times."
+        },
+        {
+            "name": "Finishing Touches",
+            "date": "07/05/2021",
+            "note": "Week 15! During this week, I mainly worked on getting all the flex properties, custom scroll-kits for the modals, and divs scrolling working. Additionally, I had cleaned up many of the events, whilst adding a window.onload function to set data on joining so that the user understands how the content works. On top of that, I have replaced IDs that are used multiple times, thus, changing them to a class and query selecting them to change attributes of said class. Finally, I downloaded other browser types, including Firefox, Opera, Chromium, Chrome, and Edge. This was to ensure that my code was suitable on all of them, in which all were intact."
+        },
+        {
+            "name": "fdssdf",
+            "date": "7/8/2021",
+            "note": "fdsfds"
+        }
+    ]
+}
